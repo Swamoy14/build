@@ -262,12 +262,7 @@ class EdifyGenerator(object):
   def PrintPixelExperienceBanner(self, is_plus, android_version, build_id, build_date,
                                   security_patch, device):
     self.Print("----------------------------------------------")
-    if is_plus:
-      self.Print("        PixelExperience (Plus edition)")
-      self.Print("                by jhenrique09")
-    else:
-      self.Print("              PixelExperience")
-      self.Print("              by jhenrique09")
+    self.Print("---------  PixelReloaded by Swamoy  ----------")
     self.Print("----------------------------------------------")
     self.Print(" Android version: %s"%(android_version))
     self.Print(" Build id: %s"%(build_id))

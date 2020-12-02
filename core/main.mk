@@ -154,10 +154,6 @@ else
   endif
 endif
 
-#
-# -----------------------------------------------------------------
-# Add our custom properties to the build properties.
-ADDITIONAL_BUILD_PROPERTIES += $(CUSTOM_PROPERTIES)
 
 # Bring in standard build system definitions.
 include $(BUILD_SYSTEM)/definitions.mk
@@ -262,7 +258,10 @@ endif
 
 ## user/userdebug ##
 
-user_variant := $(filter user userdebug,$(TARGET_BUILD_VARIANT))
+user_variant := user
+ifeq ($(TARGET_BUILD_VARIANT),eng)
+user_variant :=
+endif
 enable_target_debugging := true
 tags_to_install :=
 ifneq (,$(user_variant))

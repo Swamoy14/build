@@ -267,7 +267,7 @@ class EdifyGenerator(object):
   def PrintPixelExperienceBanner(self, is_plus, android_version, build_id, build_date,
                                   security_patch, device):
     self.Print("----------------------------------------------")
-   self.Print("---------  PixelReloaded by Swamoy  ----------")
+    self.Print("---------  PixelReloaded by Swamoy  ----------")
     self.Print("----------------------------------------------")
     self.Print(" Android version: %s"%(android_version))
     self.Print(" Build id: %s"%(build_id))
